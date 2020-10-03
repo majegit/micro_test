@@ -20,19 +20,9 @@ jobs:
           cd service_gateway
           mvn install
   
-  tests:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Testing
         run: cd .
-
-
-  merge:
-    runs-on: ubuntu-latest
-    needs: [build, tests]
-
-    steps:
+      
       - run: |
           git checkout ${GITHUB_REF#refs/heads/}
           git rebase origin/master
