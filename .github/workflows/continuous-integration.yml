@@ -16,9 +16,11 @@ jobs:
         run: |
           cd service_adify
           mvn install
+          mvn test -DskipTests=false -Dgroups=fast
           cd ..
           cd service_gateway
           mvn install
+          mvn test -DskipTests=false -Dgroups=fast
   
   tests:
     runs-on: ubuntu-latest
@@ -28,7 +30,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Testing
-        run: mvn test -DskipTests=false -Dgroups=fast
+        run: cd .
 
   merge:
     runs-on: ubuntu-latest
