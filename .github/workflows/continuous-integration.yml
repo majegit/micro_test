@@ -14,18 +14,3 @@ jobs:
 
       - name: Compile
         run: mvn install
-    
-  systemtest:
-    runs-on: ubuntu-latest
-    working-directory: systemtest
-    run: |
-      
-
-    
-  pushtomaster:
-    runs-on: ubuntu-latest
-    needs: [build, systemtest]
-    
-    
-    
-  
