@@ -25,7 +25,8 @@ jobs:
 
     steps:
       - name: Testing
-        run: cd ..
+        run: cd .
+
 
   merge:
     runs-on: ubuntu-latest
