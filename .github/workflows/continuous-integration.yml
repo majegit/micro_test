@@ -22,6 +22,7 @@ jobs:
   
   tests:
     runs-on: ubuntu-latest
+    - name: Testing
       run: cd ..
 
   merge:
