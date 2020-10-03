@@ -13,4 +13,9 @@ jobs:
           fetch-depth: 0
 
       - name: Compile
-        run: mvn install
+        run: |
+          cd service_adify
+          mvn install
+          cd ..
+          cd service_gateway
+          mvn install
