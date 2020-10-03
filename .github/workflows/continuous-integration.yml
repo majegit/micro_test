@@ -19,11 +19,7 @@ jobs:
           cd ..
           cd service_gateway
           mvn install
-  
-      - name: Testing
-        run: cd .
-      
-      - run: |
+          
           git checkout ${GITHUB_REF#refs/heads/}
           git rebase origin/master
           git branch master
