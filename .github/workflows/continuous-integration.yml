@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - "ready"
+      - "ready/**"
       
 jobs:
   build:
